@@ -1,0 +1,30 @@
+[
+  {
+    "source_url": "https://www.google.com/search?q=https://www.exampleblog.com/archive",
+    "title": "Sample Title Found",
+    "publish_date": "2024-05-20",
+    "author": "Sample Author",
+    "clean_text": "This is a sample of cleaned text from a blog post or article. It simulates the extraction of the main content based on the selector mappings."
+  },
+  {
+    "source_url": "https://www.google.com/search?q=https://www.exampleblog.com/category/tech",
+    "title": "Sample Title Found",
+    "publish_date": "2024-05-20",
+    "author": "Sample Author",
+    "clean_text": "This is a sample of cleaned text from a blog post or article. It simulates the extraction of the main content based on the selector mappings."
+  },
+  {
+    "source_url": "https://www.google.com/search?q=https://www.examplenews.com/latest",
+    "title": "Sample Title Found",
+    "publish_date": "2024-05-20",
+    "author": "Sample Author",
+    "clean_text": "This is a sample of cleaned text from a blog post or article. It simulates the extraction of the main content based on the selector mappings."
+  },
+  {
+    "source_url": "https://mgmotors.com.pk/model/phev",
+    "title": "Sample Title Found",
+    "publish_date": "2024-05-20",
+    "author": "Sample Author",
+    "clean_text": "This is a sample of cleaned text from a blog post or article. It simulates the extraction of the main content based on the selector mappings."
+  }
+]

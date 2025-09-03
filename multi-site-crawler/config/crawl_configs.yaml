@@ -1,0 +1,51 @@
+# Multi-site configuration for Crawl4AI
+# This file defines the crawl parameters for different websites.
+sites:
+  - name: "Blog_Site"
+    enabled: true
+    start_urls:
+      - "https://www.google.com/search?q=https://www.exampleblog.com/archive"
+      - "https://www.google.com/search?q=https://www.exampleblog.com/category/tech"
+    crawl_depth: 2
+    rules:
+      allow:
+        - "/posts/"
+      deny:
+        - "/author/"
+    selector_mappings:
+      title: "h1.post-title"
+      publish_date: "span.date"
+      author: "div.author-name"
+      clean_text: "div.article-content"
+
+  - name: "News_Site"
+    enabled: true
+    start_urls:
+      - "https://www.google.com/search?q=https://www.examplenews.com/latest"
+    crawl_depth: 3
+    rules:
+      allow:
+        - "/articles/2024/"
+    selector_mappings:
+      title: "h1.article-headline"
+      publish_date: "span.timestamp"
+      author: "span.byline"
+      clean_text: "div.article-body"
+
+  - name: "MG_HS_PHEV"
+    enabled: true
+    start_urls:
+      # This is the specific URL for the MG HS PHEV model
+      - "https://mgmotors.com.pk/model/phev"
+    # A crawl depth of 1 is sufficient for a single product page
+    crawl_depth: 1
+    rules:
+      # No specific rules needed since we are only crawling one page
+      allow:
+        - ".*"
+    selector_mappings:
+      # These selectors are based on a review of the page's structure
+      title: "h1.headline.font-inter"
+      # The website has a specifications section, not a publish date or author
+      specifications: "div.spec_item_title"
+      description: "p.des.font-inter"
